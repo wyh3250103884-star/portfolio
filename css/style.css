@@ -650,6 +650,7 @@ img {
 .project-image video.project-img {
   object-fit: contain;
   background: #000;
+  padding: 16px;
 }
 
 .project-info {
