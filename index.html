@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>无烟 — 个人网站</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 夜空背景 -->
+  <div class="night-sky">
+    <div class="moon"></div>
+    <div class="stars-layer stars-slow"></div>
+    <div class="stars-layer stars-mid"></div>
+    <div class="stars-layer stars-fast"></div>
+  </div>
+
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">無煙<span>.</span></a>
+
+      <button class="menu-toggle" aria-label="切换菜单">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">首页</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="projects.html">项目</a></li>
+        <li><a href="contact.html">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 首屏区域 -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-greeting">徹夜の世界へようこそ</p>
+        <h1 class="hero-name">无烟</h1>
+        <p class="hero-tagline">
+          这是无烟的个人网站，还在建设中。
+        </p>
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn-primary">查看作品</a>
+          <a href="contact.html" class="btn btn-outline">与我联系</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="character-frame">
+          <img src="img/qicaotupian.jpg" alt="七草荠" class="character-img">
+          <div class="character-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 无烟. 保留所有权利。</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

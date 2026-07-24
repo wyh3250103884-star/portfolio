@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系 — 无烟</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">無煙<span>.</span></a>
+      <button class="menu-toggle" aria-label="切换菜单">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="projects.html">项目</a></li>
+        <li><a href="contact.html" class="active">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-section">
+    <div class="container">
+      <h2 class="section-title">与我联系</h2>
+      <div class="section-line"></div>
+
+      <p class="contact-intro">
+        有项目想法或只是想打个招呼？填写下方表单，我会尽快回复你。
+      </p>
+
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/mojgkznl" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name" placeholder="请输入你的姓名" required>
+          </div>
+          <div class="form-group">
+            <label for="email">邮箱</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">主题</label>
+          <input type="text" id="subject" name="subject" placeholder="你想聊些什么？">
+        </div>
+
+        <div class="form-group">
+          <label for="message">留言</label>
+          <textarea id="message" name="message" rows="6" placeholder="请输入你的留言..." required></textarea>
+        </div>
+
+        <p class="form-status" id="form-status"></p>
+        <button type="submit" class="btn btn-primary" id="submit-btn">发送消息</button>
+      </form>
+
+      <div class="contact-links">
+        <a href="mailto:18858826287@163.com" class="contact-link">
+          <span class="contact-icon">✉</span> 18858826287@163.com
+        </a>      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 无烟. 保留所有权利。</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
