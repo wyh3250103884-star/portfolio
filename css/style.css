@@ -644,8 +644,12 @@ img {
 .project-img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.project-image video.project-img {
   object-fit: contain;
-  padding: 24px;
+  background: #000;
 }
 
 .project-info {
