@@ -33,8 +33,13 @@
       <div class="projects-grid">
         <!-- 项目：Weather Dashboard -->
         <article class="project-card">
-          <div class="project-image">
-            <span class="project-placeholder">🌤️</span>
+          <div class="project-image" id="hangzhou-weather">
+            <div class="live-weather">
+              <img class="live-weather-icon" src="" alt="">
+              <div class="live-weather-temp">--°</div>
+              <div class="live-weather-desc">Loading...</div>
+              <div class="live-weather-detail">Humidity: --%</div>
+            </div>
           </div>
           <div class="project-info">
             <span class="project-category">Web 应用</span>
@@ -77,6 +82,33 @@
     <p>&copy; 2026 无烟. 保留所有权利。</p>
   </footer>
 
+  <script src="config.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var container = document.getElementById('hangzhou-weather');
+      if (!container) return;
+
+      var icon = container.querySelector('.live-weather-icon');
+      var temp = container.querySelector('.live-weather-temp');
+      var desc = container.querySelector('.live-weather-desc');
+      var detail = container.querySelector('.live-weather-detail');
+
+      fetch('https://api.openweathermap.org/data/2.5/weather?q=Hangzhou&appid=' + PORTFOLIO_API_KEY + '&units=metric')
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          icon.src = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png';
+          icon.alt = data.weather[0].description;
+          temp.textContent = Math.round(data.main.temp) + '°C';
+          desc.textContent = data.weather[0].description;
+          detail.textContent = 'Humidity: ' + data.main.humidity + '%';
+        })
+        .catch(function () {
+          temp.textContent = 'Hangzhou';
+          desc.textContent = '';
+          detail.textContent = '';
+        });
+    })();
+  </script>
 </body>
 </html>
