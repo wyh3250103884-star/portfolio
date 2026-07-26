@@ -627,6 +627,13 @@ img {
   gap: 4px;
 }
 
+.live-weather-city {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+
 .live-weather-icon {
   width: 56px;
   height: 56px;
